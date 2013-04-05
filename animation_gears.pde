@@ -23,7 +23,6 @@ void setup(){
   for (int y = 0; y < distance; y++) {
     for (int x = 0; x < distance; x++) {
       for (int z = 0; z < distance; z++) {
-
         cubes[index++] = new cubeDraw(100,100,100,1); 
       }
     }
@@ -48,15 +47,17 @@ void draw(){
   }
 }
 class cubeDraw {
+
   float numX, numY, numZ;
   float numSize;
-  // Contructor (required)
+
   cubeDraw(float inumX, float inumY, float inumZ, float inumSize) {
     numX = inumX;
     numY = inumY;
     numZ = inumZ;
     numSize = inumSize;
   }
+
   void update(){
     numX = numX++;
     if (numX >= 20){
@@ -79,6 +80,7 @@ class cubeDraw {
     rotateY(-90);
     rotateZ(-45);
   }
+
   void draw() {
     diam = 60*sin(angle) + 90;
     angle += 0.001;
@@ -106,5 +108,6 @@ class cubeDraw {
       }
     }
   }
+
 }
 
